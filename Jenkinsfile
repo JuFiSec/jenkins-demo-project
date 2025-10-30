@@ -45,8 +45,8 @@ pipeline {
                 }
             }
         }
-        
-        stage('Démonstration avec Maven (optionnel)') {
+
+        stage('Démonstration avec Maven') {
             steps {
                 script {
                     echo "=== Stage 4 : Test avec Maven (si pom.xml existe) ==="
@@ -64,13 +64,13 @@ pipeline {
     
     post {
         success {
-            echo '✅ Pipeline terminé avec SUCCÈS !'
+            echo ' Pipeline terminé avec SUCCÈS !'
         }
         failure {
-            echo '❌ Pipeline terminé en ÉCHEC.'
+            echo ' Pipeline terminé en ÉCHEC.'
         }
         always {
-            echo '🔚 Nettoyage terminé.'
+            echo ' Nettoyage terminé.'
         }
     }
 }
